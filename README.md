@@ -1,6 +1,6 @@
 # onboarding_screen
 
-An implementation of onboarding screen that will be shown once.
+An implementation of onboarding screen that shows once.
 
 # preview 
 
