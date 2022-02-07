@@ -77,7 +77,11 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      _controller.animateToPage(2,
+                          duration: Duration(milliseconds: 500),
+                          curve: Curves.easeInOut);
+                    },
                     child: const Text('SKIP'),
                   ),
                   Center(
