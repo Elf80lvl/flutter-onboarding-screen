@@ -54,7 +54,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 style: const TextStyle(fontSize: 24),
               ),
               style: TextButton.styleFrom(
-                shape: RoundedRectangleBorder(
+                shape: const RoundedRectangleBorder(
                     //borderRadius: BorderRadius.circular(16),
                     ),
                 primary: Colors.white,
@@ -66,8 +66,8 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 final prefs = await SharedPreferences.getInstance();
                 prefs.setBool('showHome', true);
 
-                Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(builder: (context) => HomeScreen()));
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
+                    builder: (context) => const HomeScreen()));
               },
             )
           : Container(
@@ -117,7 +117,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
       child: Center(
         child: Text(
           text,
-          style: TextStyle(
+          style: const TextStyle(
               fontSize: 24, color: Colors.white, fontWeight: FontWeight.bold),
         ),
       ),
