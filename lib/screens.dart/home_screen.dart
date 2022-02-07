@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:onboarding_screen/main.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'onboarding_screen.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -28,8 +30,24 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
-      body: Center(
-        child: Text('Home Page'),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 32.0),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'Home Page',
+                style: TextStyle(fontSize: 24),
+              ),
+              SizedBox(height: 32),
+              Text(
+                'The Log Out button in the app bar will set the bool "showHome" to true and push to the onboarding screen again.',
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
